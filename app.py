@@ -1,6 +1,6 @@
 from flask import Flask, make_response, jsonify, request
 from flask_cors import CORS, cross_origin
-from chat import init_bot, chat
+from bot.chat import init_bot, chat
 
 app = Flask(__name__)
 cors = CORS(app)

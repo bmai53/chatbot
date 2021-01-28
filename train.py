@@ -3,8 +3,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from nn_model import NeuralNet
-from dataset import process_data, get_data_loader
+from bot.nn_model import NeuralNet
+from bot.dataset import process_data, get_data_loader
 
 def train():
     X_train, y_train, data = process_data()
@@ -16,7 +16,7 @@ def train():
     batch_size = 50
     num_workers = 4
     learning_rate = 0.001
-    num_epochs = 100
+    num_epochs = 1500
 
     train_loader = get_data_loader(batch_size=batch_size, num_workers=num_workers)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

@@ -3,7 +3,7 @@ import math
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
-from nltk_utils import tokenize, stem, bag_of_words
+from .nltk_utils import tokenize, stem, bag_of_words
 
 class ChatDataset(Dataset):
     def __init__(self):
