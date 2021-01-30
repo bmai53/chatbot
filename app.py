@@ -1,11 +1,15 @@
 from flask import Flask, make_response, jsonify, request, render_template
 from flask_cors import CORS, cross_origin
 from bot.chat import init_bot, chat
+import json
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-intents, all_words, tags, model, device = init_bot()
+
+def load_responses():
+      with open('responses.json', 'r') as f:
+        responses = json.load(f)
 
 @app.route('/')
 def home():
@@ -15,7 +19,7 @@ def home():
 @cross_origin()
 def get_bot_response():
     sentence = request.json['sentence']
-    response = chat(sentence, intents, all_words, tags, model, device)
+    response = chat(sentence)
     return make_response(jsonify({"response" : response}), 200)
    
 

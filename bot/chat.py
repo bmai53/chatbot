@@ -29,7 +29,9 @@ def init_bot(bot_name="BennyBot"):
     return intents, all_words, tags, model, device
 
 
-def chat(sentence, intents, all_words, tags, model, device):
+def chat(sentence):
+
+    intents, all_words, tags, model, device = init_bot()
 
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
