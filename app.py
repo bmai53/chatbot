@@ -6,12 +6,8 @@ import json
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+
 bot = ChatBot()
-
-
-def load_responses():
-    with open('responses.json', 'r') as f:
-        responses = json.load(f)
 
 
 @app.route('/')

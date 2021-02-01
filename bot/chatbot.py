@@ -11,8 +11,8 @@ class ChatBot():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     def __init__(self):
-        with open('intents.json', 'r') as f:
-            self.intents = json.load(f)
+        with open('responses.json', 'r') as f:
+            self.responses = json.load(f)
 
         FILE = 'data.pth'
         data = torch.load(os.path.join(os.path.dirname(__file__), '..', FILE))
@@ -45,7 +45,7 @@ class ChatBot():
         prob = probs[0][predicted.item()]
 
         if prob.item() > 0.75:
-            for intent in self.intents["intents"]:
+            for intent in self.responses["intents"]:
                 if tag == intent["tag"]:
                     return random.choice(intent['responses'])
         else:
