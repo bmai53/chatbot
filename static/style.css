@@ -1,6 +1,7 @@
 #chatbox {
-  overflow: auto;
   height: 60vh;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
 }
 #capstone {
   height: calc(60vh - 50px);
