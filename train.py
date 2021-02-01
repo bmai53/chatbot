@@ -4,11 +4,15 @@ import torch
 import torch.nn as nn
 
 from bot.nn_model import NeuralNet
-from bot.dataset import process_data, get_data_loader
+from bot.dataset import ChatDataset, process_data, get_data_loader
+
 
 def train():
-    X_train, y_train, data = process_data()
-    
+    with open('intents.json', 'r') as f:
+        intents = json.load(f)
+    X_train, y_train, data = process_data(intents)
+    dataset = ChatDataset(X_train, y_train)
+
     # Hyperparameters
     input_size = data["input_size"]
     output_size = data["output_size"]
@@ -18,7 +22,7 @@ def train():
     learning_rate = 0.001
     num_epochs = 1500
 
-    train_loader = get_data_loader(batch_size=batch_size, num_workers=num_workers)
+    train_loader = get_data_loader(dataset, batch_size, num_workers)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = NeuralNet(input_size, hidden_size, output_size).to(device)
 
@@ -29,12 +33,11 @@ def train():
     for epoch in range(num_epochs):
         for (words, labels) in train_loader:
             words = words.to(device)
-            labels = labels.to(device)
-            # labels = labels.to(dtype=torch.long).to(device)
+            labels = labels.to(dtype=torch.long).to(device)
 
             # forward pass
             outputs = model(words)
-            loss = criterion(outputs, labels.long())
+            loss = criterion(outputs, labels)
 
             # backpropagation and optimizer
             optimizer.zero_grad()
@@ -50,6 +53,7 @@ def train():
     FILE = "data_test.pth"
     torch.save(data, FILE)
     print(f'training complete, file saved to "{FILE}"')
+
 
 if __name__ == '__main__':
     train()

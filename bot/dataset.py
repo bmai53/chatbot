@@ -5,9 +5,9 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from .nltk_utils import tokenize, stem, bag_of_words
 
+
 class ChatDataset(Dataset):
-    def __init__(self):
-        X_train, y_train, _ = process_data()
+    def __init__(self, X_train, y_train):
         self.n_samples = len(X_train)
         self.x_data = X_train
         self.y_data = y_train
@@ -20,9 +20,21 @@ class ChatDataset(Dataset):
         return self.n_samples
 
 
-def process_data():
-    with open('intents.json', 'r') as f:
-        data = json.load(f)
+def process_data(data):
+    """
+    input: intents.json file
+    output: 
+        X_train,
+        y_train,
+        data = {
+            all_words,
+            tags,
+            xy,
+            input_size,
+            output_size,
+            hidden_size,
+        }     
+    """
 
     all_words = []
     tags = []
@@ -34,7 +46,7 @@ def process_data():
 
         for pattern in intent['patterns']:
             w = tokenize(pattern)
-            all_words.extend(w) 
+            all_words.extend(w)
             xy.append((w, tag))
 
     ignore_words = ['?', '!', '.', ',']
@@ -65,7 +77,7 @@ def process_data():
     return X_train, y_train, data
 
 
-def get_data_loader(batch_size, num_workers):
-    dataset = ChatDataset()
-    train_loader = DataLoader(dataset=dataset, batch_size=batch_size, num_workers=num_workers, shuffle=True)
+def get_data_loader(dataset, batch_size, num_workers):
+    train_loader = DataLoader(
+        dataset=dataset, batch_size=batch_size, num_workers=num_workers, shuffle=True)
     return train_loader
