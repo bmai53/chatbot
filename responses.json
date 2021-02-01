@@ -3,45 +3,67 @@
     {
       "tag": "greeting",
       "responses": [
-        "Hey :-)",
         "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Hi there, nice to meet you!",
+        "Hello!",
+        "Hi :)"
       ]
     },
     {
       "tag": "goodbye",
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
+      "responses": ["Goodbye!", "See you next time!", "Bye :)"]
     },
     {
       "tag": "thanks",
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "responses": ["You're welcome", "No problem!", "My pleasure"]
     },
     {
-      "tag": "items",
-      "responses": ["We sell coffee and tea", "We have coffee and tea"]
-    },
-    {
-      "tag": "payments",
+      "tag": "about",
       "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "I am a recent graduate with a diverse background in computer science, business, and data analytics/machine learning."
       ]
     },
     {
-      "tag": "delivery",
-      "responses": ["Delivery takes 2-4 days", "Shipping takes 2-4 days"]
+      "tag": "bot",
+      "responses": [
+        "This bot was made using a feed forward neural net implemented and trained with PyTorch."
+      ]
+    },
+    {
+      "tag": "experience",
+      "responses": [
+        "Currently I am working as a Software Developer. In the past I worked as a Business Analyst where my responsibilities revolve mainly around project management duties and writing requirements documents."
+      ]
+    },
+    {
+      "tag": "school",
+      "responses": [
+        "I graduated recently from Simon Fraser University with a Joint Degree in Computing Science and Business. I also have the Business Analystics and Decision Making Certificate from the Beedie School of Business."
+      ]
+    },
+    {
+      "tag": "strengths",
+      "responses": ["My strengths are ..."]
+    },
+    {
+      "tag": "weakness",
+      "responses": ["My weaknesses are ..."]
+    },
+    {
+      "tag": "projects",
+      "responses": ["Projects..."]
+    },
+    {
+      "tag": "interests",
+      "responses": ["Interests..."]
+    },
+    {
+      "tag": "hobbies",
+      "responses": ["Hobbies ..."]
     },
     {
       "tag": "funny",
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
+      "responses": ["joke..."]
     }
   ]
 }

@@ -1,5 +1,7 @@
 __pycache__
 env
+intents
 intents.json
+responses.json
 .vscode
 

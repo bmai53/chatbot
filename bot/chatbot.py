@@ -14,8 +14,10 @@ class ChatBot():
         with open('responses.json', 'r') as f:
             self.responses = json.load(f)
 
-        FILE = 'data.pth'
-        data = torch.load(os.path.join(os.path.dirname(__file__), '..', FILE))
+        FILE = os.path.join(os.path.dirname(__file__), '..', 'data.pth')
+        # if no cuda
+        map_location = None if torch.cuda.is_available() else 'cpu'
+        data = torch.load(FILE, map_location=map_location)
 
         self.input_size = data["input_size"]
         self.hidden_size = data["hidden_size"]

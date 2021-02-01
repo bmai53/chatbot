@@ -50,7 +50,7 @@ def train():
     print(f'final loss: {loss.item():.4f}')
 
     data["model_state"] = model.state_dict()
-    FILE = "data_test.pth"
+    FILE = "data.pth"
     torch.save(data, FILE)
     print(f'training complete, file saved to "{FILE}"')
 
