@@ -45,8 +45,8 @@ class ChatBot():
         prob = probs[0][predicted.item()]
 
         if prob.item() > 0.75:
-            for intent in self.responses["intents"]:
-                if tag == intent["tag"]:
-                    return random.choice(intent['responses'])
+            for response_data in self.responses["response_data"]:
+                if tag == response_data["tag"]:
+                    return random.choice(response_data['responses'])
         else:
             return "I do not understand ):"
