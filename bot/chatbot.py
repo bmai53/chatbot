@@ -40,7 +40,7 @@ class ChatBot():
         if(profanity.contains_profanity(sentence)):
             for response_data in self.responses["response_data"]:
                 if response_data["tag"] == "bad":
-                    return random.choice(response_data["responses"])
+                    return {"msg": random.choice(response_data["responses"])}
 
         sentence = tokenize(sentence)
         X = bag_of_words(sentence, self.all_words)

@@ -26,7 +26,7 @@
 .chatBubble {
   width: fit-content;
   border-radius: 10px;
-  text-align: justify;
+  text-align: left;
   line-height: 30px;
   font-size: 16px;
   color: white;
