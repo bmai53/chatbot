@@ -20,19 +20,21 @@
     {
       "tag": "about",
       "responses": [
-        "I am a recent graduate with a diverse background in computer science, business, and data analytics/machine learning."
+        "I am a recent graduate with a diverse background in computer science, business, and data analytics/machine learning. My current focus is on web development, data analytics, and machine learning projects, using JavaScript and Python"
       ]
     },
     {
       "tag": "bot",
       "responses": [
-        "This bot was made using a feed forward neural net implemented and trained with PyTorch."
+        "This bot was made using a feed forward neural net implemented and trained with PyTorch.",
+        "This bot was built using mainly Python, with the training and machine learning done in PyTorch and API built in Flask."
       ]
     },
     {
       "tag": "experience",
       "responses": [
-        "Currently I am working as a Software Developer. In the past I worked as a Business Analyst where my responsibilities revolve mainly around project management duties and writing requirements documents."
+        "Currently I am working as a Software Developer. In the past I worked as a Business Analyst where my responsibilities revolve mainly around project management duties and writing requirements documents.",
+        "I have experience as both a Software Developer and a Business Analyst, which gives me insight on both sides of the software development process. I have wrote both software to meet requirements and requirements for another developer to use."
       ]
     },
     {
@@ -43,11 +45,17 @@
     },
     {
       "tag": "strengths",
-      "responses": ["My strengths are ..."]
+      "responses": [
+        "A strength of mine is problem solving, and being able to look for the information I need. Often times I am given minimal information, and I am left on my own to figure out a solution to a problem.",
+        "A strength of mine is ebing able to look for the right information. Most of what I know as a software developer is self taught, gained through reading online resources and documentations."
+      ]
     },
     {
       "tag": "weakness",
-      "responses": ["My weaknesses are ..."]
+      "responses": [
+        "A weakness of mine is overconfidence in my abilities. Sometimes I find myself taking on more work than I can handle. I try to improve on this by constantly reevaluating my skills and abilities.",
+        "A weakness of mine is pushing myself to take on challenging tasks. This is fine when working as an individual contributor, but in a team it can be detrimental to other people's work."
+      ]
     },
     {
       "tag": "projects",

@@ -46,9 +46,9 @@ class ChatBot():
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
 
-        if prob.item() > 0.75:
+        if prob.item() > 0.7:
             for response_data in self.responses["response_data"]:
                 if tag == response_data["tag"]:
                     return random.choice(response_data['responses'])
         else:
-            return "I do not understand ):"
+            return "Sorry, I don't understand :("
