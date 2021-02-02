@@ -70,8 +70,36 @@
       "responses": ["Hobbies ..."]
     },
     {
+      "tag": "technology",
+      "responses": ["..."]
+    },
+    {
+      "tag": "new_role",
+      "responses": ["..."]
+    },
+    {
+      "tag": "motivations",
+      "responses": ["..."]
+    },
+    {
+      "tag": "goals",
+      "responses": ["..."]
+    },
+    {
+      "tag": "describe",
+      "responses": ["..."]
+    },
+    {
+      "tag": "bot",
+      "responses": ["..."]
+    },
+    {
+      "tag": "bad",
+      "responses": ["..."]
+    },
+    {
       "tag": "funny",
-      "responses": ["joke..."]
+      "responses": ["..."]
     }
   ]
 }

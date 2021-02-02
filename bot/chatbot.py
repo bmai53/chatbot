@@ -1,6 +1,7 @@
 import random
 import json
 import os
+from better_profanity import profanity
 import torch
 from .nn_model import NeuralNet
 from .nltk_utils import bag_of_words, tokenize
@@ -11,6 +12,8 @@ class ChatBot():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
     def __init__(self):
+        profanity.load_censor_words()
+
         with open('responses.json', 'r') as f:
             self.responses = json.load(f)
 
@@ -33,6 +36,12 @@ class ChatBot():
         self.model.eval()
 
     def chat(self, sentence):
+
+        if(profanity.contains_profanity(sentence)):
+            for response_data in self.responses["response_data"]:
+                if response_data["tag"] == "bad":
+                    return random.choice(response_data["responses"])
+
         sentence = tokenize(sentence)
         X = bag_of_words(sentence, self.all_words)
         X = X.reshape(1, X.shape[0])
@@ -49,7 +58,7 @@ class ChatBot():
         if prob.item() > 0.7:
             for response_data in self.responses["response_data"]:
                 if tag == response_data["tag"]:
-                    return random.choice(response_data['responses'])
+                    return random.choice(response_data["responses"])
         else:
             return random.choice([
                 "Sorry, I don't understand :(",
