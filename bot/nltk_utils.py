@@ -2,7 +2,7 @@ import nltk
 from nltk.stem.snowball import SnowballStemmer
 import numpy as np
 
-nltk.download('punkt')
+# nltk.download('punkt')
 stemmer = SnowballStemmer("english")
 
 
