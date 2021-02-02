@@ -24,7 +24,7 @@
       ]
     },
     {
-      "tag": "bot",
+      "tag": "develop",
       "responses": [
         "This bot was made using a feed forward neural net implemented and trained with PyTorch.",
         "This bot was built using mainly Python, with the training and machine learning done in PyTorch and API built in Flask."

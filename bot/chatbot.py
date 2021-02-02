@@ -51,4 +51,10 @@ class ChatBot():
                 if tag == response_data["tag"]:
                     return random.choice(response_data['responses'])
         else:
-            return "Sorry, I don't understand :("
+            return random.choice([
+                "Sorry, I don't understand :(",
+                "I'm sorry, could you rephrase that?",
+                "Sorry, I'm having troubles understanding you",
+                "Sorry, that doesn't make sense to me :(",
+                "I'm sorry, I dont quite understand"
+            ])
