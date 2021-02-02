@@ -58,12 +58,16 @@ class ChatBot():
         if prob.item() > 0.7:
             for response_data in self.responses["response_data"]:
                 if tag == response_data["tag"]:
-                    return random.choice(response_data["responses"])
+                    if "link" in response_data:
+                        return {"msg": random.choice(response_data["responses"]), "link": response_data["link"]}
+                    return {"msg": random.choice(response_data["responses"])}
         else:
-            return random.choice([
-                "Sorry, I don't understand :(",
-                "I'm sorry, could you rephrase that?",
-                "Sorry, I'm having troubles understanding you",
-                "Sorry, that doesn't make sense to me :(",
-                "I'm sorry, I dont quite understand"
-            ])
+            return {
+                "msg": random.choice([
+                    "Sorry, I don't understand :(",
+                    "I'm sorry, could you rephrase that?",
+                    "Sorry, I'm having troubles understanding you",
+                    "Sorry, that doesn't make sense to me :(",
+                    "I'm sorry, I dont quite understand"
+                ])
+            }

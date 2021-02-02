@@ -59,47 +59,83 @@
     },
     {
       "tag": "projects",
-      "responses": ["Projects..."]
+      "responses": [
+        "Projects I work on in my spare time include BennyBoy (this right here), BudgetTracker, jokeDB and much more. Check out my portfolio to see more of what I am currently working on!",
+        "A project of mine is BudgetTracker, A full stack budgeting web application developed using the PERN stack (PostgreSQL, Express, React, Node). Features include CSV file integration, support for CRUD operations, and user authentication using JSON Web Tokens. Check out my portfolio to see more of what I am currently working on!",
+        "A project of mine I am working on is jokeDB, a SPA built with a React/JavaScript front end and a Python/Flask/MongoDB backend. Check out my portfolio to see more of what I am currently working on!"
+      ],
+      "link": "https://bennymai.me/"
     },
     {
       "tag": "interests",
-      "responses": ["Interests..."]
+      "responses": [
+        "My interests include web/software development, data analytics and machine learning! I was initially a business student using data analytics with Python when I fell in love with programming. Since then I have been actively working to better my skills and mastering new frameworks!",
+        "Some of my interests apart from software development and programming include big data, data analytics, and machine learning. I was initially a business student using data analytics with Python when I fell in love with programming. Since then I have been actively working to better my skills and mastering new frameworks!"
+      ]
     },
     {
       "tag": "hobbies",
-      "responses": ["Hobbies ..."]
+      "responses": [
+        "I have a wide range of hobbies, including basketball, travelling, and cooking!",
+        "A hobby of mine is basketball. I have played regularly since high school and it has been a great way to stay connected with friends!",
+        "A hobby of mine is travelling, exploring new places and seeing the world! So far this year hasn't been the best for travelling but hopefully I can travel soon again :)",
+        "A hobby of mine is cooking. I love learning new things and trying to recreate recipes I see on the internet. For better or worse, I (usually) have an edible treat for my self at the end :)"
+      ]
     },
     {
       "tag": "technology",
-      "responses": ["..."]
+      "responses": [
+        "My main choices for langauges and tools used to develop software have been JavaScript, Python and related frameworks, including NodeJs, Express, React, Flask, and more.",
+        "My choices for front end development would be either Vue or React, while backend development would include Express, Flask, and Django"
+      ]
     },
     {
       "tag": "new_role",
-      "responses": ["..."]
+      "responses": [
+        "What I look for in a role is working with new technologies and people so that I can continue to learn more and improve myself. I look to challenge myself, and I hope to work in a place that would do that for me."
+      ]
     },
     {
       "tag": "motivations",
-      "responses": ["..."]
+      "responses": [
+        "My motivations to work include learning new things and creating something that really interests me. In the past it has been using technologies that have been new to me, and working on AI enhanced tools. My inspirations usually come from learning about new tools and how I can use them to implement my next project!"
+      ]
     },
     {
       "tag": "goals",
-      "responses": ["..."]
+      "responses": [
+        "My current goal is to do and learn as much as I can. Hopefully in 5 years, I would have gained enough knowledge so that I could be the go to person when there are problems that need to be solved!"
+      ]
     },
     {
       "tag": "describe",
-      "responses": ["..."]
+      "responses": [
+        "Friends and colleagues would desribe me as determined, communicative, and dependable. My determination stems from a stubborn nature, refusing to give up when trying to solve an issue. At the same time, I try my best to communicate my progress and ask for help when I need it."
+      ]
     },
     {
       "tag": "bot",
-      "responses": ["..."]
+      "responses": [
+        "I am a bot created to let others know my creator better! Visit the link to find out more :)"
+      ],
+      "link": "https://bennymai.me/"
     },
     {
       "tag": "bad",
-      "responses": ["..."]
+      "responses": [
+        "Thats not very nice ):",
+        "You shouldn't say things like that!",
+        "I will pretend I did not hear that"
+      ]
     },
     {
       "tag": "funny",
-      "responses": ["..."]
+      "responses": [
+        "The shovel was a ground-breaking invention.",
+        "Why did the cookie go to the hospital? Because he felt crummy.",
+        "Why does a chicken coop have 2 doors? Because, if it had 4 doors it would be chicken sedan",
+        "What did the grape say after someone sat on it? Nothing, it just let out a little whine"
+      ]
     }
   ]
 }

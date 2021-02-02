@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/style.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -13,15 +14,19 @@
     <h1 class="jumbotron text-center">BennyBot</h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 offset-sm-3">
+            <div class="col-sm-8 offset-sm-2">
                 <div id="chatbox" class="border border-success">
                     <div id="capstone"></div>
-                    <p class="botText"><span>Hi! I'm BennyBot</span></p>
+                    <div class="botText chatBubble">
+                        <div class="botIcon icon"></div><span>Hi! I'm BennyBot</span>
+                    </div>
                 </div>
                 <div id="userInput">
-                    <input id="textInput" class="form-control" type="text" name="msg"
+                    <input id="textInput" class="form-control shadow-none" type="text" name="msg"
                         placeholder="Type Your Message Here" autofocus>
-                    <input id="buttonInput" class="btn btn-success form-control" type="submit" value="Send">
+                    <button id="buttonInput" type="submit" class="btn btn-default btn-sm shadow-none">
+                        <span class="glyphicon glyphicon-send"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -29,7 +34,7 @@
             function reduceCapstoneHeight() {
                 var el = document.getElementById("capstone");
                 var height = el.offsetHeight;
-                var newHeight = height - 50;
+                var newHeight = height - 60;
                 el.style.height = newHeight + 'px';
             }
 
@@ -40,7 +45,7 @@
             function getResponse() {
                 reduceCapstoneHeight()
                 let userText = $("#textInput").val();
-                let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+                let userHtml = '<div class="userText chatBubble"><span>' + userText + '</span></div>';
                 $("#textInput").val("");
                 $("#chatbox").append(userHtml);
                 scrollToBottom()
@@ -57,9 +62,12 @@
                 }).then(function (res) {
                     return res.json()
                 }).then(function (data) {
-                    console.log(data.response)
                     reduceCapstoneHeight()
-                    var botHtml = '<p class="botText"><span>' + data.response + '</span></p>';
+                    // console.log(data)
+                    var botHtml = '<div class="botText chatBubble"><span>' + data.msg + '</span></div>';
+                    if (data.link !== undefined) {
+                        var botHtml = '<div class="botText chatBubble"><span>' + data.msg + '</span> <a class="link" href = "' + data.link + '"> Link </a></div>';
+                    }
                     $("#chatbox").append(botHtml);
                     scrollToBottom()
                     document.getElementById('userInput').scrollIntoView({ block: 'start', behavior: 'smooth' });
@@ -77,9 +85,7 @@
                 }
             });
         </script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+
     </div>
 </body>
 

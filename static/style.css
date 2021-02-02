@@ -1,45 +1,52 @@
 #chatbox {
   height: 60vh;
   overflow-y: scroll;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 #capstone {
-  height: calc(60vh - 50px);
+  height: calc(60vh - 60px);
 }
 
 #userInput {
   display: flex;
+  border: 3px solid grey;
 }
 #textInput {
   width: 90%;
   border: none;
-  border-bottom: 3px solid aqua;
+  font-size: 16px;
 }
+
 #buttonInput {
   width: 10%;
+  font-size: 16px;
+}
+
+.chatBubble {
+  width: fit-content;
+  border-radius: 10px;
+  text-align: justify;
+  line-height: 30px;
+  font-size: 16px;
+  color: white;
+  padding: 5px 15px;
+  margin-bottom: 25px;
 }
 
 .userText {
-  color: white;
-  font-family: monospace;
-  font-size: 17px;
-  text-align: right;
-  line-height: 30px;
-}
-.userText span {
+  margin-left: auto;
+  margin-right: 10px;
   background-color: #009688;
-  padding: 10px;
-  border-radius: 2px;
 }
+
 .botText {
-  color: white;
-  font-family: monospace;
-  font-size: 17px;
-  text-align: left;
-  line-height: 30px;
-}
-.botText span {
+  margin-left: 10px;
+  margin-right: auto;
   background-color: #ef5350;
-  padding: 10px;
-  border-radius: 2px;
+}
+
+.link {
+  color: white;
+  text-decoration: underline;
 }

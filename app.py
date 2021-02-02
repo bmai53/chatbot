@@ -20,7 +20,8 @@ def home():
 def get_bot_response():
     sentence = request.json['sentence']
     response = bot.chat(sentence)
-    return make_response(jsonify({"response": response}), 200)
+    print(response)
+    return make_response(jsonify(response), 200)
 
 
 @app.errorhandler(500)
