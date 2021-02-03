@@ -37,13 +37,13 @@
 .userText {
   margin-left: auto;
   margin-right: 10px;
-  background-color: #1982fc;
+  background-color: #43cc47;
 }
 
 .botText {
   margin-left: 10px;
   margin-right: auto;
-  background-color: #43cc47;
+  background-color: #1982fc;
 }
 
 .link {
@@ -51,12 +51,25 @@
   text-decoration: underline;
 }
 
+/* bootstrap */
+.navbar-toggler {
+  display: none;
+}
+
 /* mobile + small screen */
 @media screen and (max-width: 480px) {
   #chatbox {
-    height: 80vh;
+    height: 75vh;
   }
   #capstone {
-    height: calc(80vh - 60px);
+    height: calc(75vh - 60px);
+  }
+
+  .navbar > .web-view {
+    display: none;
+  }
+
+  .navbar-toggler {
+    display: inline;
   }
 }

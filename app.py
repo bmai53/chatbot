@@ -1,7 +1,8 @@
-from flask import Flask, make_response, jsonify, request, render_template
+from flask import Flask, make_response, jsonify, request, render_template, send_from_directory
 from flask_cors import CORS, cross_origin
 from bot.chatbot import ChatBot
 import json
+import os
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -22,6 +23,11 @@ def get_bot_response():
     response = bot.chat(sentence)
     print(response)
     return make_response(jsonify(response), 200)
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(os.path.dirname(__file__), 'static'), 'favicon.ico')
 
 
 @app.errorhandler(500)
