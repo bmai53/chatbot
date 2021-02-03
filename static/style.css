@@ -37,16 +37,26 @@
 .userText {
   margin-left: auto;
   margin-right: 10px;
-  background-color: #009688;
+  background-color: #1982fc;
 }
 
 .botText {
   margin-left: 10px;
   margin-right: auto;
-  background-color: #ef5350;
+  background-color: #43cc47;
 }
 
 .link {
   color: white;
   text-decoration: underline;
+}
+
+/* mobile + small screen */
+@media screen and (max-width: 480px) {
+  #chatbox {
+    height: 80vh;
+  }
+  #capstone {
+    height: calc(80vh - 60px);
+  }
 }

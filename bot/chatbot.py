@@ -40,7 +40,10 @@ class ChatBot():
         if(profanity.contains_profanity(sentence)):
             for response_data in self.responses["response_data"]:
                 if response_data["tag"] == "bad":
-                    return {"msg": random.choice(response_data["responses"])}
+                    return {
+                        "msg": random.choice(response_data["responses"]),
+                        "profanity": True
+                    }
 
         sentence = tokenize(sentence)
         X = bag_of_words(sentence, self.all_words)
@@ -55,12 +58,20 @@ class ChatBot():
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
 
-        if prob.item() > 0.7:
+        if prob.item() > 0.75:
             for response_data in self.responses["response_data"]:
                 if tag == response_data["tag"]:
+
+                    bot_response = {
+                        "msg": random.choice(response_data["responses"]),
+                        "tag": tag
+                    }
+
                     if "link" in response_data:
-                        return {"msg": random.choice(response_data["responses"]), "link": response_data["link"]}
-                    return {"msg": random.choice(response_data["responses"])}
+                        bot_response["link"] = response_data["link"]
+                        return bot_response
+
+                    return bot_response
         else:
             return {
                 "msg": random.choice([

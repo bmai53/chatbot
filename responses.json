@@ -129,6 +129,10 @@
       ]
     },
     {
+      "tag": "good",
+      "responses": ["Thank you :)", "Thats so kind of you :)", "Thanks!"]
+    },
+    {
       "tag": "funny",
       "responses": [
         "The shovel was a ground-breaking invention.",

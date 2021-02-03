@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/style.css">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <h1 class="jumbotron text-center">BennyBot</h1>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand h1" href="."><i class="fas fa-robot"></i> BennyBot</span>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-sm-8 offset-sm-2">
-                <div id="chatbox" class="border border-success">
+                <div id="chatbox" class="border border-primary">
                     <div id="capstone"></div>
                     <div class="botText chatBubble">
-                        <div class="botIcon icon"></div><span>Hi! I'm BennyBot</span>
+                        <span>Hi! I'm BennyBot</span>
                     </div>
                 </div>
                 <div id="userInput">
                     <input id="textInput" class="form-control shadow-none" type="text" name="msg"
                         placeholder="Type Your Message Here" autofocus>
                     <button id="buttonInput" type="submit" class="btn btn-default btn-sm shadow-none">
-                        <span class="glyphicon glyphicon-send"></span>
+                        <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
             </div>
