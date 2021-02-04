@@ -116,7 +116,7 @@
     {
       "tag": "bot",
       "responses": [
-        "I am a bot created to let others know my creator better! Visit the link to find out more :)"
+        "I am a bot created to let others get to know my creator better! Ask more questions, or visit the link to find out more :)"
       ],
       "link": "https://bennymai.me/"
     },
@@ -135,11 +135,13 @@
     {
       "tag": "funny",
       "responses": [
-        "The shovel was a ground-breaking invention.",
-        "Why did the cookie go to the hospital? Because he felt crummy.",
-        "Why does a chicken coop have 2 doors? Because, if it had 4 doors it would be chicken sedan",
-        "What did the grape say after someone sat on it? Nothing, it just let out a little whine"
-      ]
+        "Who does a pharaoh talk to when he's sad? His mummy. Find more jokes at jokesDB!",
+        "The shovel was a ground-breaking invention. Find more jokes at jokesDB!",
+        "Why did the cookie go to the hospital? Because he felt crummy. Find more jokes at jokesDB!",
+        "Why does a chicken coop have 2 doors? Because, if it had 4 doors it would be chicken sedan. Find more jokes at jokesDB!",
+        "What did the grape say after someone sat on it? Nothing, it just let out a little whine. Find more jokes at jokesDB!"
+      ],
+      "link": "https://bennymai.me/jokes-db/#/"
     }
   ]
 }

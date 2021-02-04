@@ -1,11 +1,12 @@
 #chatbox {
-  height: 60vh;
+  height: 70vh;
   overflow-y: scroll;
   overflow-wrap: anywhere;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
+
 #capstone {
-  height: calc(60vh - 60px);
+  height: calc(70vh - 60px);
 }
 
 #userInput {

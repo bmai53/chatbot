@@ -58,7 +58,7 @@ class ChatBot():
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
 
-        if prob.item() > 0.75:
+        if prob.item() > 0.8:
             for response_data in self.responses["response_data"]:
                 if tag == response_data["tag"]:
 
