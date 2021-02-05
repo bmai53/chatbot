@@ -35,15 +35,46 @@ class ChatBot():
         self.model.load_state_dict(self.model_state)  # load learned parameters
         self.model.eval()
 
+    def bad_sentence(self):
+        for response_data in self.responses["response_data"]:
+            if response_data["tag"] == "bad":
+                return {
+                    "msg": random.choice(response_data["responses"]),
+                    "tag": "bad",
+                    "profanity": True
+                }
+
+    def no_intent_detected(self):
+        return {
+            "tag": None,
+            "msg": random.choice([
+                "Sorry, I don't understand :(",
+                "I'm sorry, could you rephrase that?",
+                "Sorry, I'm having troubles understanding you",
+                "Sorry, that doesn't make sense to me :(",
+                "I'm sorry, I dont quite understand"
+            ])
+        }
+
+    def make_response(self, tag):
+        for response_data in self.responses["response_data"]:
+            if tag == response_data["tag"]:
+
+                bot_response = {
+                    "msg": random.choice(response_data["responses"]),
+                    "tag": tag
+                }
+
+                if "link" in response_data:
+                    bot_response["link"] = response_data["link"]
+                    return bot_response
+
+                return bot_response
+
     def chat(self, sentence):
 
         if(profanity.contains_profanity(sentence)):
-            for response_data in self.responses["response_data"]:
-                if response_data["tag"] == "bad":
-                    return {
-                        "msg": random.choice(response_data["responses"]),
-                        "profanity": True
-                    }
+            return self.bad_sentence()
 
         sentence = tokenize(sentence)
         X = bag_of_words(sentence, self.all_words)
@@ -52,33 +83,16 @@ class ChatBot():
 
         # get result from model
         output = self.model(X)
-        _, predicted = torch.max(output, dim=1)
+        all, predicted = torch.max(output, dim=1)
         tag = self.tags[predicted.item()]
 
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
 
-        if prob.item() > 0.8:
-            for response_data in self.responses["response_data"]:
-                if tag == response_data["tag"]:
+        print(
+            f'\n\ChatBot Prediction: \n\tsentence: {sentence} \n\tpredicted: {tag} \n\tprobability: {prob}\n')
 
-                    bot_response = {
-                        "msg": random.choice(response_data["responses"]),
-                        "tag": tag
-                    }
-
-                    if "link" in response_data:
-                        bot_response["link"] = response_data["link"]
-                        return bot_response
-
-                    return bot_response
+        if prob.item() > 0.75:
+            return self.make_response(tag)
         else:
-            return {
-                "msg": random.choice([
-                    "Sorry, I don't understand :(",
-                    "I'm sorry, could you rephrase that?",
-                    "Sorry, I'm having troubles understanding you",
-                    "Sorry, that doesn't make sense to me :(",
-                    "I'm sorry, I dont quite understand"
-                ])
-            }
+            return self.no_intent_detected()

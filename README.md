@@ -87,7 +87,6 @@ With Python 3.6+ installed, run the following commands in the root directory/env
 ```
 pip3 install -r requirements.txt
 python3 train.py
-
 ```
 
 This model was trained using Python 3.9, PyTorch 1.7.1, and CUDA 11.0. If training is done on a supporte GPU, Install the correct version of torch found [here](https://pytorch.org/get-started/locally/).

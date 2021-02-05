@@ -10,4 +10,4 @@ if __name__ == '__main__':
         if sentence == 'quit':
             break
         response = bot.chat(sentence)
-        print(f"{bot_name}: {response}")
+        print(f"{bot_name}: {response['msg']}")
