@@ -1,33 +1,9 @@
 {
   "response_data": [
     {
-      "tag": "greeting",
-      "responses": [
-        "Hello, thanks for visiting",
-        "Hi there, nice to meet you!",
-        "Hello!",
-        "Hi :)"
-      ]
-    },
-    {
-      "tag": "goodbye",
-      "responses": ["Goodbye!", "See you next time!", "Bye :)"]
-    },
-    {
-      "tag": "thanks",
-      "responses": ["You're welcome", "No problem!", "My pleasure"]
-    },
-    {
       "tag": "about",
       "responses": [
         "I am a recent graduate with a diverse background in computer science, business, and data analytics/machine learning. My current focus is on web development, data analytics, and machine learning projects, using JavaScript and Python"
-      ]
-    },
-    {
-      "tag": "develop",
-      "responses": [
-        "This bot was made using a feed forward neural net implemented and trained with PyTorch.",
-        "This bot was built using mainly Python, with the training and machine learning done in PyTorch and API built in Flask."
       ]
     },
     {
@@ -114,6 +90,35 @@
       ]
     },
     {
+      "tag": "contact",
+      "responses": ["Visit my website for the latest up to date contact info!"],
+      "link": "https://bennymai.me/"
+    },
+    {
+      "tag": "greeting",
+      "responses": [
+        "Hello, thanks for visiting",
+        "Hi there, nice to meet you!",
+        "Hello! I'm BennyBot",
+        "Hi :)"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "responses": ["Goodbye!", "See you next time!", "Bye :)"]
+    },
+    {
+      "tag": "thanks",
+      "responses": ["You're welcome", "No problem!", "My pleasure"]
+    },
+    {
+      "tag": "develop",
+      "responses": [
+        "This bot was made using a feed forward neural net implemented and trained with PyTorch.",
+        "This bot was built using mainly Python, with the training and machine learning done in PyTorch and API built in Flask."
+      ]
+    },
+    {
       "tag": "bot",
       "responses": [
         "I am a bot created to let others get to know my creator better! Ask more questions, or visit the link to find out more :)"
@@ -131,6 +136,37 @@
     {
       "tag": "good",
       "responses": ["Thank you :)", "Thats so kind of you :)", "Thanks!"]
+    },
+    {
+      "tag": "questions",
+      "responses": [
+        "You can ask questions such as where I went to school, or my past work experience. You can even ask about my hobbies and interests to get to know me better :)",
+        "You can get to know me better by asking BennyBot questions about my school, work, etc. You can even ask BennyBot to entertain you by doing things such as flipping a coin or telling jokes :)"
+      ]
+    },
+    {
+      "tag": "coinflip",
+      "responses": ["Heads!", "Tails!"]
+    },
+    {
+      "tag": "friend",
+      "responses": [
+        "I would love to be friends!",
+        "I can never have too many friends!"
+      ]
+    },
+    {
+      "tag": "secret",
+      "responses": [
+        "I'm an open book! I answer all questions, so secrets aren't really my thing"
+      ]
+    },
+    {
+      "tag": "money",
+      "responses": [
+        "I suggest a budgeting app that would help you track your spending! Click the link to check it out!"
+      ],
+      "link": "https://bennymai.me/budget-tracker/#/"
     },
     {
       "tag": "funny",

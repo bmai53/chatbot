@@ -90,7 +90,7 @@ class ChatBot():
         prob = probs[0][predicted.item()]
 
         print(
-            f'\n\ChatBot Prediction: \n\tsentence: {sentence} \n\tpredicted: {tag} \n\tprobability: {prob}\n')
+            f'\nChatBot Prediction: \n\tsentence: {sentence} \n\tpredicted: {tag} \n\tprobability: {prob}\n')
 
         if prob.item() > 0.75:
             return self.make_response(tag)
