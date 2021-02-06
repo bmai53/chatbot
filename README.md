@@ -35,6 +35,8 @@ A chatbot built and trained using a feed forward neural net, implemented in PyTo
 
 ## Running the App
 
+Clone or download the repo, then do either of the following:
+
 Run `python3 cli_chat.py` to test the chatbot in the terminal.
 
 Run `flask run` to start the web app and server. Open `http://127.0.0.1:5000/` to see the app!
@@ -89,7 +91,7 @@ pip3 install -r requirements.txt
 python3 train.py
 ```
 
-This model was trained using Python 3.9, PyTorch 1.7.1, and CUDA 11.0. If training is done on a supporte GPU, Install the correct version of torch found [here](https://pytorch.org/get-started/locally/).
+This model was trained using Python 3.9, PyTorch 1.7.1, and CUDA 11.0. If training is done on a supported GPU, Install the correct version of torch found [here](https://pytorch.org/get-started/locally/).
 
 Or, find the download link for the correct `.whl` file from `https://download.pytorch.org/whl/torch_stable.html`
 
