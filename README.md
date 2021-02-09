@@ -4,9 +4,9 @@ A chatbot built and trained using a feed forward neural net, implemented in PyTo
 
 [Click here to visit!](https://chat-with-bennybot.herokuapp.com/)
 
-<img height=500px src="https://i.imgur.com/7GLdY8r.png" />
+<img height=500px src="https://i.imgur.com/RMUmF8q.png" />
 
-<img src="https://i.imgur.com/FuuJow1.png" />
+<img src="https://i.imgur.com/9VsuG0K.png" />
 
 ## Try out the API!
 
