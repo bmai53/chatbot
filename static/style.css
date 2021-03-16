@@ -32,7 +32,6 @@
 
 .chatBubble {
   width: fit-content;
-  border-radius: 10px;
   text-align: left;
   line-height: 30px;
   font-size: 16px;
@@ -44,11 +43,13 @@
 .userText {
   margin-left: auto;
   background-color: #43cc47;
+  border-radius: 15px 15px 0px 15px;
 }
 
 .botText {
   margin-right: auto;
   background-color: #1982fc;
+  border-radius: 15px 15px 15px 0px;
 }
 
 .link {
