@@ -2,97 +2,25 @@
   "response_data": [
     {
       "tag": "about",
-      "responses": [
-        "I am a recent graduate with a diverse background in computer science, business, and data analytics/machine learning. My current focus is on web development, data analytics, and machine learning projects, using JavaScript and Python"
-      ]
-    },
-    {
-      "tag": "experience",
-      "responses": [
-        "Currently I am working as a Software Developer. In the past I worked as a Business Analyst where my responsibilities revolve mainly around project management duties and writing requirements documents.",
-        "I have experience as both a Software Developer and a Business Analyst, which gives me insight on both sides of the software development process. I have wrote both software to meet requirements and requirements for another developer to use."
-      ]
-    },
-    {
-      "tag": "school",
-      "responses": [
-        "I graduated recently from Simon Fraser University with a Joint Degree in Computing Science and Business. I also have the Business Analystics and Decision Making Certificate from the Beedie School of Business."
-      ]
-    },
-    {
-      "tag": "strengths",
-      "responses": [
-        "A strength of mine is problem solving, and being able to look for the information I need. Often times I am given minimal information, and I am left on my own to figure out a solution to a problem.",
-        "A strength of mine is ebing able to look for the right information. Most of what I know as a software developer is self taught, gained through reading online resources and documentations."
-      ]
-    },
-    {
-      "tag": "weakness",
-      "responses": [
-        "A weakness of mine is overconfidence in my abilities. Sometimes I find myself taking on more work than I can handle. I try to improve on this by constantly reevaluating my skills and abilities.",
-        "A weakness of mine is pushing myself to take on challenging tasks. This is fine when working as an individual contributor, but in a team it can be detrimental to other people's work."
-      ]
+      "responses": ["Hi, my name is Benny and I like to write code."]
     },
     {
       "tag": "projects",
       "responses": [
-        "Projects I work on in my spare time include BennyBoy (this right here), BudgetTracker, jokeDB and much more. Check out my portfolio to see more of what I am currently working on!",
-        "A project of mine is BudgetTracker, A full stack budgeting web application developed using the PERN stack (PostgreSQL, Express, React, Node). Features include CSV file integration, support for CRUD operations, and user authentication using JSON Web Tokens. Check out my portfolio to see more of what I am currently working on!",
-        "A project of mine I am working on is jokeDB, a SPA built with a React/JavaScript front end and a Python/Flask/MongoDB backend. Check out my portfolio to see more of what I am currently working on!"
+        "Check out my portfolio to see more of what I am currently working on!"
       ],
-      "link": "https://bennymai.me/"
-    },
-    {
-      "tag": "interests",
-      "responses": [
-        "My interests include web/software development, data analytics and machine learning! I was initially a business student using data analytics with Python when I fell in love with programming. Since then I have been actively working to better my skills and mastering new frameworks!",
-        "Some of my interests apart from software development and programming include big data, data analytics, and machine learning. I was initially a business student using data analytics with Python when I fell in love with programming. Since then I have been actively working to better my skills and mastering new frameworks!"
-      ]
-    },
-    {
-      "tag": "hobbies",
-      "responses": [
-        "I have a wide range of hobbies, including basketball, travelling, and cooking!",
-        "A hobby of mine is basketball. I have played regularly since high school and it has been a great way to stay connected with friends!",
-        "A hobby of mine is travelling, exploring new places and seeing the world! So far this year hasn't been the best for travelling but hopefully I can travel soon again :)",
-        "A hobby of mine is cooking. I love learning new things and trying to recreate recipes I see on the internet. For better or worse, I (usually) have an edible treat for my self at the end :)"
-      ]
+      "link": "https://bmai.dev/"
     },
     {
       "tag": "technology",
       "responses": [
-        "My main choices for langauges and tools used to develop software have been JavaScript, Python and related frameworks, including NodeJs, Express, React, Flask, and more.",
-        "My choices for front end development would be either Vue or React, while backend development would include Express, Flask, and Django"
-      ]
-    },
-    {
-      "tag": "new_role",
-      "responses": [
-        "What I look for in a role is working with new technologies and people so that I can continue to learn more and improve myself. I look to challenge myself, and I hope to work in a place that would do that for me."
-      ]
-    },
-    {
-      "tag": "motivations",
-      "responses": [
-        "My motivations to work include learning new things and creating something that really interests me. In the past it has been using technologies that have been new to me, and working on AI enhanced tools. My inspirations usually come from learning about new tools and how I can use them to implement my next project!"
-      ]
-    },
-    {
-      "tag": "goals",
-      "responses": [
-        "My current goal is to do and learn as much as I can. Hopefully in 5 years, I would have gained enough knowledge so that I could be the go to person when there are problems that need to be solved!"
-      ]
-    },
-    {
-      "tag": "describe",
-      "responses": [
-        "Friends and colleagues would desribe me as determined, communicative, and dependable. My determination stems from a stubborn nature, refusing to give up when trying to solve an issue. At the same time, I try my best to communicate my progress and ask for help when I need it."
+        "My main choices for langauges and tools would be JavaScript/TypeScript, Python and Java. Frameworks including NodeJs, Express, React, Flask, and more."
       ]
     },
     {
       "tag": "contact",
       "responses": ["Visit my website for the latest up to date contact info!"],
-      "link": "https://bennymai.me/"
+      "link": "https://bmai.dev/"
     },
     {
       "tag": "greeting",
@@ -121,9 +49,9 @@
     {
       "tag": "bot",
       "responses": [
-        "I am a bot created to let others get to know my creator better! Ask more questions, or visit the link to find out more :)"
+        "I am a bot created to let others get to know my me better! Ask more questions, or visit the link to find out more :)"
       ],
-      "link": "https://bennymai.me/"
+      "link": "https://bmai.dev/"
     },
     {
       "tag": "bad",
@@ -138,13 +66,6 @@
       "responses": ["Thank you :)", "Thats so kind of you :)", "Thanks!"]
     },
     {
-      "tag": "questions",
-      "responses": [
-        "You can ask questions such as where I went to school, or my past work experience. You can even ask about my hobbies and interests to get to know me better :)",
-        "You can get to know me better by asking BennyBot questions about my school, work, etc. You can even ask BennyBot to entertain you by doing things such as flipping a coin or telling jokes :)"
-      ]
-    },
-    {
       "tag": "coinflip",
       "responses": ["Heads!", "Tails!"]
     },
@@ -156,19 +77,6 @@
       ]
     },
     {
-      "tag": "secret",
-      "responses": [
-        "I'm an open book! I answer all questions, so secrets aren't really my thing"
-      ]
-    },
-    {
-      "tag": "money",
-      "responses": [
-        "I suggest a budgeting app that would help you track your spending! Click the link to check it out!"
-      ],
-      "link": "https://bennymai.me/budget-tracker/#/"
-    },
-    {
       "tag": "funny",
       "responses": [
         "Who does a pharaoh talk to when he's sad? His mummy. Find more jokes at jokesDB!",
@@ -177,7 +85,13 @@
         "Why does a chicken coop have 2 doors? Because, if it had 4 doors it would be chicken sedan. Find more jokes at jokesDB!",
         "What did the grape say after someone sat on it? Nothing, it just let out a little whine. Find more jokes at jokesDB!"
       ],
-      "link": "https://bennymai.me/jokes-db/#/"
+      "link": "https://bmai.dev/jokes-db/#/"
+    },
+    {
+      "tag": "help",
+      "responses": [
+        "I can tell you about my projects, what technology I use, or even a good joke :)"
+      ]
     }
   ]
 }
